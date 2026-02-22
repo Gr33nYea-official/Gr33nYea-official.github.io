@@ -445,8 +445,8 @@ githubLinks.forEach(link => {
 });
 
 // ========== ИНИЦИАЛИЗАЦИЯ ==========
+
 console.log('✅ Сайт Рисовалка Pro загружен!');
 console.log('❤️ От Gr33nYea');
 console.log('💰 DonationAlerts: https://www.donationalerts.com/r/gr33nyea_the_builder');
-console.log('💬 Discord: https://discord.gg/MPJUKRsm');
 console.log('🐙 GitHub: https://github.com/Gr33nYea-official/Gr33Yea-official.github.io');
