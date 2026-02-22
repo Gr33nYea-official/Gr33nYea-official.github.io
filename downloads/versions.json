@@ -1,0 +1,20 @@
+{
+    "version": "2.0.0",
+    "build_date": "2026-02-21T23:51:47Z",
+    "files": {
+        "windows": {
+            "64bit": "risovalka-windows-64bit-2.0.0.zip",
+            "32bit": "risovalka-windows-32bit-2.0.0.zip"
+        },
+        "macos": {
+            "intel": "risovalka-macos-intel-2.0.0.zip",
+            "silicon": "risovalka-macos-silicon-2.0.0.zip"
+        },
+        "linux": {
+            "deb": "risovalka-linux-2.0.0.deb.zip",
+            "jar": "risovalka-linux-2.0.0.jar",
+            "source": "risovalka-linux-source-2.0.0.zip"
+        }
+    },
+    "donate": "https://www.donationalerts.com/r/gr33nyea_the_builder"
+}
