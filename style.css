@@ -14,6 +14,10 @@
     --dark-green: #087f23;
     --red: #ff4d4d;
     --light-red: #ff8c8c;
+    --discord: #5865F2;
+    --discord-light: #7289da;
+    --github: #333;
+    --github-light: #6e5494;
     --shadow: 0 5px 15px rgba(0,0,0,0.1);
     --shadow-hover: 0 15px 30px rgba(76,175,80,0.2);
 }
@@ -869,6 +873,125 @@ h2::after {
     }
 }
 
+/* ========== СООБЩЕСТВО ========== */
+#community {
+    background: linear-gradient(135deg, rgba(88, 101, 242, 0.05) 0%, rgba(36, 41, 46, 0.1) 100%);
+}
+
+.community-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.community-card {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-light);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.dark .community-card {
+    background: #2d2d2d;
+}
+
+.community-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+}
+
+.discord-card::before {
+    background: linear-gradient(90deg, #5865F2, #7289da);
+}
+
+.github-card::before {
+    background: linear-gradient(90deg, #333, #6e5494);
+}
+
+.dark .github-card::before {
+    background: linear-gradient(90deg, #fff, #6e5494);
+}
+
+.community-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.community-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.discord-card .community-icon {
+    color: #5865F2;
+}
+
+.github-card .community-icon {
+    color: #333;
+}
+
+.dark .github-card .community-icon {
+    color: #fff;
+}
+
+.community-stats {
+    margin: 1rem 0;
+    color: var(--green);
+}
+
+.community-stats i {
+    margin-right: 0.5rem;
+}
+
+.community-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.discord-btn {
+    background: #5865F2;
+    color: white;
+}
+
+.discord-btn:hover {
+    background: #4752c4;
+    transform: scale(1.05);
+}
+
+.github-btn {
+    background: #333;
+    color: white;
+}
+
+.github-btn:hover {
+    background: #24292e;
+    transform: scale(1.05);
+}
+
+.dark .github-btn {
+    background: #fff;
+    color: #333;
+}
+
 /* ========== ОБ АВТОРЕ ========== */
 .author-card {
     max-width: 500px;
@@ -916,6 +1039,49 @@ h2::after {
     line-height: 1.8;
 }
 
+/* Социальные ссылки */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.social-link.discord {
+    background: #5865F2;
+}
+
+.social-link.discord:hover {
+    background: #4752c4;
+    transform: translateY(-3px);
+}
+
+.social-link.github {
+    background: #333;
+}
+
+.social-link.github:hover {
+    background: #24292e;
+    transform: translateY(-3px);
+}
+
+.dark .social-link.github {
+    background: #fff;
+    color: #333;
+}
+
 /* ========== ФУТЕР ========== */
 footer {
     text-align: center;
@@ -927,6 +1093,46 @@ footer {
 .dark footer {
     background: #2d2d2d;
     border-top: 1px solid #333;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.footer-social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.footer-social-link:nth-child(1) {
+    background: #5865F2;
+}
+
+.footer-social-link:nth-child(2) {
+    background: #333;
+}
+
+.footer-social-link:nth-child(3) {
+    background: var(--red);
+}
+
+.footer-social-link:hover {
+    transform: translateY(-3px) scale(1.1);
+}
+
+.dark .footer-social-link:nth-child(2) {
+    background: #fff;
+    color: #333;
 }
 
 .footer-donate {
@@ -989,7 +1195,7 @@ footer .signature {
     h1 {
         font-size: 3.5rem;
     }
-
+    
     .container {
         padding: 0 30px;
     }
@@ -999,45 +1205,59 @@ footer .signature {
     h1 {
         font-size: 2.5rem;
     }
-
+    
     h2 {
         font-size: 2rem;
     }
-
+    
     nav ul {
         display: none;
     }
-
+    
     .platforms {
         font-size: 2rem;
     }
-
+    
     .download-buttons {
         flex-direction: column;
         align-items: center;
     }
-
+    
     .download-btn {
         width: 100%;
         text-align: center;
     }
-
+    
     .quick-buttons {
         flex-direction: column;
         align-items: center;
     }
-
+    
     .quick-btn {
         width: 100%;
     }
-
+    
     .donate-card {
         padding: 2rem 1rem;
     }
-
+    
     .da-btn {
         padding: 1rem 1.5rem;
         font-size: 1rem;
+    }
+    
+    .community-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .social-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .social-link {
+        width: 100%;
+        justify-content: center;
     }
 }
 
@@ -1045,27 +1265,27 @@ footer .signature {
     h1 {
         font-size: 2rem;
     }
-
+    
     .subtitle {
         font-size: 1.2rem;
     }
-
+    
     .platforms i {
         margin: 0 0.5rem;
     }
-
+    
     .features-grid {
         grid-template-columns: 1fr;
     }
-
+    
     .download-grid {
         grid-template-columns: 1fr;
     }
-
+    
     .author-card {
         padding: 1.5rem;
     }
-
+    
     .scroll-top {
         bottom: 20px;
         right: 20px;
