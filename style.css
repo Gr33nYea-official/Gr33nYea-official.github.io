@@ -943,15 +943,6 @@ h2::after {
     color: #fff;
 }
 
-.community-stats {
-    margin: 1rem 0;
-    color: var(--green);
-}
-
-.community-stats i {
-    margin-right: 0.5rem;
-}
-
 .community-btn {
     display: inline-flex;
     align-items: center;
@@ -991,7 +982,6 @@ h2::after {
     background: #fff;
     color: #333;
 }
-
 /* ========== ОБ АВТОРЕ ========== */
 .author-card {
     max-width: 500px;
