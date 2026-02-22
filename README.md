@@ -1,2 +1,12 @@
-!!!ATTENTION!!!
-This website is for testing and is in alpha release. All versions of the app (macOS, Windows, and Linux) have not been tested. Thank you for your attention!
+# Рисовалка Pro 🎨
+
+Официальный сайт приложения для рисования.
+
+**Ссылки:**
+- [Сайт](https://gr33nyea-official.github.io/Gr33Yea-official.github.io/)
+- [Discord](https://discord.gg/MPJUKRsm)
+- [GitHub](https://github.com/Gr33nYea-official/Gr33Yea-official.github.io)
+- [Поддержать](https://www.donationalerts.com/r/gr33nyea_the_builder)
+
+## О проекте
+Простое и удобное приложение для рисования на Windows, macOS и Linux.
